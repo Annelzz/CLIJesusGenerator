@@ -1,15 +1,15 @@
 class Generator
     @@all = []
-
-    attr_accessor :name, :other
+    attr_accessor :other
 
     def initialize(other)
         @@all << self
         puts other
     end
 
+
     def self.all
-        @@all
+        puts @@all
     end
 
 end

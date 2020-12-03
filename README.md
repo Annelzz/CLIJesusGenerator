@@ -1,8 +1,13 @@
 # JesusGenerator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/JesusGenerator`. To experiment with that code, run `bin/console` for an interactive prompt.
+This program takes the user input for 
 
-TODO: Delete this and the text above, and describe your gem
+1) A Gospel in the Bible(Matthew, Mark, Luke, or John)
+2) A chapter in the corresponding book, and
+3) a verse number in the corresponding book
+
+and, through getbible.net's API, returns the corresponding verse.
+
 
 ## Installation
 
@@ -22,7 +27,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+The user inputs a Gospel book name, a chapter number, and a verse number. They will recieve the corresponding verse.
 
 ## Development
 

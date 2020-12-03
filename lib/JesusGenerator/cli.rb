@@ -10,10 +10,10 @@ class CLI
         # chapter = gets.to_i
         # puts "Now enter a Verse Number(ex. 3)"
         # verse_number = gets.to_i
-        gospel = "Luke"
-        chapter = 1
-        verse_number = 1
+        gospel = "Matthew"
+        chapter = 2
+        verse_number = 15
         API.get_gospel(gospel, chapter, verse_number)
-        puts "#{final}"
+        # puts "#{final}"
     end
 end

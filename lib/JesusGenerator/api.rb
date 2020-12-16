@@ -18,10 +18,10 @@ class API
         parsed = JSON.parse(takenout)
 
 
-        # 'other' parses JSON and returns the verse it finds, utilizing user inputs 
+        # 'verse' parses JSON and returns the verse it finds, utilizing user inputs 
         other = ((parsed)["book"])[0]["chapter"]["#{phrase}"]["verse"]
 
         newverse = Generator.new(other)
-        newverse
+        puts other
     end      
 end

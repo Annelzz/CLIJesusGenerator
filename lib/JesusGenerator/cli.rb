@@ -6,44 +6,41 @@ class CLI
 
         puts "Please enter a Gospel(Matthew, Mark, Luke, John)"
         @gospel = gets.chomp
-        if @gospel == "Matthew"
-        elsif @gospel == "Mark"
-        elsif @gospel == "Luke"
-        elsif @gospel == "John"
+        if @gospel == "Matthew" || @gospel == "Mark" || @gospel == "Luke" || @gospel == "John"
+            get_chapter
         else
             puts "Please enter a listed name."
             start
         end
-        get_chapter
     end
 
     def get_chapter
         puts "Now enter a Chapter Number(ex. 15)"
         @chapter = gets.to_i
         if @chapter > 0 && @chapter < 29
+            get_verse
         else
             puts "Try a positive number ranging from 1-16."
             get_chapter
         end
-        get_verse
     end
 
     def get_verse
         puts "Now enter a Verse Number(ex. 3)"
         @verse_number = gets.to_i
         if @verse_number > 0 && @verse_number < 76
+            produces_verse
         else
             puts "Try a positive number ranging from 1-75 (26 is the average number for the Gospels)"
             get_verse
         end
-        produces_verse
     end
 
     def produces_verse
         puts "Here's the verse:"
         sleep 1
 
-        API.get_gospel(@gospel, @chapter, @verse_number)
+        puts API.get_gospel(@gospel, @chapter, @verse_number)
         another_verse 
     end
 

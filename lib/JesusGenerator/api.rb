@@ -13,15 +13,15 @@ class API
         response = Net::HTTP.get_response(uri)
         bodied = response.body()
 
-        # 'takenout' gets rid of the first item in the body and the last three, all of which were unnedded semicolons
+        # 'takenout' gets rid of the first item in the body and the last three, all of which were unneeded semicolons
         takenout = bodied.slice!(1..(bodied.length-3))
         parsed = JSON.parse(takenout)
 
 
-        # 'verse' parses JSON and returns the verse it finds, utilizing user inputs 
+        # 'other' parses JSON and returns the verse it finds, utilizing user inputs 
         other = ((parsed)["book"])[0]["chapter"]["#{phrase}"]["verse"]
 
         newverse = Generator.new(other)
-        puts other
+        other
     end      
 end

@@ -8,6 +8,14 @@ class Generator
         @@all << self
     end
 
+    def other
+        @other
+    end
+
+    def other=(other)
+        @other = other
+    end
+
     def self.all
         @@all
     end
